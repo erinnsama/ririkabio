@@ -408,7 +408,25 @@ async function loadModel() {
 
 async function unlock() {
   const val = document.getElementById("pw").value.trim();
-  if (!val) { document.getElementById("lockerr").textContent = "請輸入密碼"; return; }
+  const errEl = document.getElementById("lockerr");
+  if (!val) { errEl.textContent = "請輸入密碼"; return; }
+  errEl.textContent = "驗證中…";
+
+  // 先跟 server 驗證密碼（本機無 API 時略過，仍可預覽 UI）
+  try {
+    const r = await fetch("/api/save", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ password: val, verify: true }),
+    });
+    let ok = false;
+    try { ok = (await r.json()).success === true; } catch (e) { ok = null; }
+    if (ok === false) { errEl.textContent = "密碼錯誤"; return; }
+    // ok === null 代表沒有 API（本機），放行預覽
+  } catch (e) {
+    // 網路/無 API：放行（本機預覽）
+  }
+
   pw = val;
   try {
     model = await loadModel();
@@ -418,8 +436,9 @@ async function unlock() {
     document.getElementById("panel").style.display = "block";
     document.getElementById("savebar").style.display = "block";
     sessionStorage.setItem("ririka_pw", pw);
+    errEl.textContent = "";
   } catch (e) {
-    document.getElementById("lockerr").textContent = "讀取失敗：" + e.message;
+    errEl.textContent = "讀取失敗：" + e.message;
   }
 }
 function logout() {

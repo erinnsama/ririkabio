@@ -81,6 +81,11 @@ class handler(BaseHTTPRequestHandler):
             self._respond({"success": False, "error": "密碼錯誤"}, 401)
             return
 
+        # 僅驗證密碼（後台登入用），不寫入
+        if data.get("verify"):
+            self._respond({"success": True})
+            return
+
         profile = data.get("profile")
         if not isinstance(profile, dict):
             self._respond({"success": False, "error": "missing profile"}, 400)
