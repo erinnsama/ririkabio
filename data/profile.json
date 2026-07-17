@@ -3,7 +3,11 @@
     "name": "RIRIKA",
     "nameZh": "莉莉卡",
     "avatar": "assets/avatar.jpg",
-    "tags": ["NSWER", "DIVE", "吉友"]
+    "tags": [
+      "NSWER",
+      "DIVE",
+      "吉友"
+    ]
   },
   "about": {
     "title": "關於我",
@@ -15,7 +19,11 @@
   },
   "interests": {
     "title": "日常",
-    "items": ["上班", "睡覺", "吃零食"]
+    "items": [
+      "上班",
+      "睡覺",
+      "吃零食"
+    ]
   },
   "links": [
     {
@@ -32,9 +40,18 @@
       "bias": "主推 Lily",
       "accent": "#4f7cff",
       "timeline": [
-        { "when": "2022 初", "what": "到音源飯，持續關注" },
-        { "when": "2025 初", "what": "正式入坑（定義：開始花錢買周邊、專輯）" },
-        { "when": "現在", "what": "一路支持中" }
+        {
+          "when": "2022 初",
+          "what": "到音源飯，持續關注"
+        },
+        {
+          "when": "2025 初",
+          "what": "正式入坑（定義：開始花錢買周邊、專輯）"
+        },
+        {
+          "when": "現在",
+          "what": "一路支持中"
+        }
       ],
       "notes": [
         "主推是 Lily，是個團粉，整團都喜歡",
@@ -49,7 +66,10 @@
       "bias": "主推員瑛",
       "accent": "#ff5fa2",
       "timeline": [
-        { "when": "2025 末", "what": "透過綜藝認識張員瑛" }
+        {
+          "when": "2025 末",
+          "what": "透過綜藝認識張員瑛"
+        }
       ],
       "notes": [
         "主推是員瑛，全團好感以上",
@@ -68,21 +88,60 @@
         "bias": "吉伊、古本",
         "note": "沒有討厭的角色，所以不要來跟我說你討厭誰"
       },
-      { "name": "葬送的芙莉蓮", "bias": "賽莉耶／芙莉蓮" },
-      { "name": "排球少年", "bias": "及川徹" },
-      { "name": "進擊的巨人", "bias": "阿爾敏" }
+      {
+        "name": "葬送的芙莉蓮",
+        "bias": "賽莉耶／芙莉蓮"
+      },
+      {
+        "name": "排球少年",
+        "bias": "及川徹"
+      },
+      {
+        "name": "進擊的巨人",
+        "bias": "阿爾敏"
+      }
     ],
     "footnote": "以上開電影都會刷 N 遍"
   },
   "concerts": {
     "title": "演唱會（已購票）",
     "items": [
-      { "date": "2025-04", "title": "NMIXX CHANGE UP : MIXX LAB", "city": "TAIPEI", "group": "NMIXX" },
-      { "date": "2025-07", "title": "LE SSERAFIM TOUR 'EASY CRAZY HOT'", "city": "TAIPEI", "group": "LE SSERAFIM" },
-      { "date": "2025-09", "title": "TRENDY TAIPEI KOREA GIRL'S POWER", "city": "TAIPEI", "group": "拼盤" },
-      { "date": "2026-07", "title": "NMIXX EPISODE 1: ZERO FRONTIER", "city": "KAOHSIUNG", "group": "NMIXX" },
-      { "date": "2026-08", "title": "1ST WORLD TOUR EPISODE 1: ZERO FRONTIER", "city": "JAPAN", "group": "NMIXX" },
-      { "date": "2026-09", "title": "IVE WORLD TOUR 'SHOW WHAT I AM'", "city": "TAIPEI", "group": "IVE" }
+      {
+        "date": "2025-04",
+        "title": "NMIXX CHANGE UP : MIXX LAB",
+        "city": "TAIPEI",
+        "group": "NMIXX"
+      },
+      {
+        "date": "2025-07",
+        "title": "LE SSERAFIM TOUR 'EASY CRAZY HOT'",
+        "city": "TAIPEI",
+        "group": "LE SSERAFIM"
+      },
+      {
+        "date": "2025-09",
+        "title": "TRENDY TAIPEI KOREA GIRL'S POWER",
+        "city": "TAIPEI",
+        "group": "拼盤"
+      },
+      {
+        "date": "2026-07",
+        "title": "NMIXX EPISODE 1: ZERO FRONTIER",
+        "city": "KAOHSIUNG",
+        "group": "NMIXX"
+      },
+      {
+        "date": "2026-08",
+        "title": "1ST WORLD TOUR EPISODE 1: ZERO FRONTIER",
+        "city": "JAPAN",
+        "group": "NMIXX"
+      },
+      {
+        "date": "2026-09",
+        "title": "IVE WORLD TOUR 'SHOW WHAT I AM'",
+        "city": "TAIPEI",
+        "group": "IVE"
+      }
     ]
   },
   "support": {
