@@ -1,4 +1,168 @@
 {
+  "profile": {
+    "name": "RIRIKA",
+    "nameZh": "莉莉卡",
+    "avatar": "assets/avatar.jpg",
+    "tags": [
+      "NSWER",
+      "DIVE",
+      "吉友"
+    ]
+  },
+  "about": {
+    "title": "關於我",
+    "lines": [
+      "極度活網，追星會用這個 Threads 帳號",
+      "追星 Instagram 基本不用，但雙平台有加都會回加",
+      "創建的本意是希望認識更多同擔朋友 ੭˙ᗜ˙੭"
+    ]
+  },
+  "interests": {
+    "title": "日常",
+    "items": [
+      "上班",
+      "睡覺",
+      "吃零食"
+    ]
+  },
+  "links": [
+    {
+      "platform": "Threads",
+      "label": "@nsweririka",
+      "url": "https://www.threads.com/@nsweririka",
+      "note": "追星主帳・有加都會回加"
+    }
+  ],
+  "fandoms": [
+    {
+      "level": "深坑",
+      "group": "NMIXX",
+      "bias": "主推 Lily",
+      "accent": "#4f7cff",
+      "timeline": [
+        {
+          "when": "2022 初",
+          "what": "到音源飯，持續關注"
+        },
+        {
+          "when": "2025 初",
+          "what": "正式入坑（定義：開始花錢買周邊、專輯）"
+        },
+        {
+          "when": "現在",
+          "what": "一路支持中"
+        }
+      ],
+      "notes": [
+        "主推是 Lily，是個團粉，整團都喜歡",
+        "CP 都好感以上，C6 取 2，最喜歡的是莉嫄 ＼嫄莉覺醒／",
+        "看大家發什嗑什：04LINE／被窩／忙內，偶而嗑雪花／AOz",
+        "我不會因為 CP 吵架，知道你的喜好也不會貼臉！"
+      ]
+    },
+    {
+      "level": "淺坑",
+      "group": "IVE",
+      "bias": "主推員瑛",
+      "accent": "#ff5fa2",
+      "timeline": [
+        {
+          "when": "2025 末",
+          "what": "透過綜藝認識張員瑛"
+        }
+      ],
+      "notes": [
+        "主推是員瑛，全團好感以上",
+        "很喜歡他的正向與人格魅力",
+        "身邊剛好也有 DIVE，就一起買周邊、買專輯",
+        "成員們也各自有萌點所以入坑，也愛看 IVE 的綜藝！"
+      ]
+    }
+  ],
+  "hobbies": {
+    "title": "興趣坑",
+    "items": [
+      {
+        "name": "Chiikawa",
+        "when": "2024 年中入坑",
+        "bias": "吉伊、古本",
+        "note": "沒有討厭的角色，所以不要來跟我說你討厭誰"
+      },
+      {
+        "name": "葬送的芙莉蓮",
+        "bias": "賽莉耶／芙莉蓮"
+      },
+      {
+        "name": "排球少年",
+        "bias": "及川徹"
+      },
+      {
+        "name": "進擊的巨人",
+        "bias": "阿爾敏"
+      }
+    ],
+    "footnote": "以上開電影都會刷 N 遍"
+  },
+  "concerts": {
+    "title": "演唱會（已購票）",
+    "items": [
+      {
+        "date": "2025-04",
+        "title": "NMIXX CHANGE UP : MIXX LAB",
+        "city": "TAIPEI",
+        "group": "NMIXX"
+      },
+      {
+        "date": "2025-07",
+        "title": "LE SSERAFIM TOUR 'EASY CRAZY HOT'",
+        "city": "TAIPEI",
+        "group": "LE SSERAFIM"
+      },
+      {
+        "date": "2025-09",
+        "title": "TRENDY TAIPEI KOREA GIRL'S POWER",
+        "city": "TAIPEI",
+        "group": "拼盤"
+      },
+      {
+        "date": "2026-07",
+        "title": "NMIXX EPISODE 1: ZERO FRONTIER",
+        "city": "KAOHSIUNG",
+        "group": "NMIXX"
+      },
+      {
+        "date": "2026-08",
+        "title": "1ST WORLD TOUR EPISODE 1: ZERO FRONTIER",
+        "city": "JAPAN",
+        "group": "NMIXX"
+      },
+      {
+        "date": "2026-09",
+        "title": "IVE WORLD TOUR 'SHOW WHAT I AM'",
+        "city": "TAIPEI",
+        "group": "IVE"
+      }
+    ]
+  },
+  "support": {
+    "title": "應援相關",
+    "items": [
+      {
+        "type": "image",
+        "date": "2026-07",
+        "title": "Lily 杯套",
+        "image": "assets/lily-cupsleeve.jpg",
+        "note": "高雄場・自製應援"
+      },
+      {
+        "type": "link",
+        "date": "2026-07",
+        "title": "高雄場應援網站",
+        "url": "https://nmixxkhinformation.erinsama.com/",
+        "note": "NMIXX 高雄場應援資訊整合站"
+      }
+    ]
+  },
   "footer": {
     "handle": "@nsweririka",
     "url": "https://www.threads.com/@nsweririka"
