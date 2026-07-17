@@ -1,0 +1,459 @@
+/* ==========================================================
+   RIRIKA 自我介紹站 — NMIXX Y2K 應援色
+   單欄・手機優先・lit.link 卡片風
+   ========================================================== */
+
+:root {
+  --blue:   #4f7cff;
+  --violet: #8b6cff;
+  --pink:   #ff5fa2;
+  --cyan:   #35d0e6;
+
+  --bg:      #eef2ff;
+  --bg-2:    #f7f3ff;
+  --card:    rgba(255, 255, 255, 0.72);
+  --card-solid: #ffffff;
+  --text:    #1b1740;
+  --muted:   #6b6796;
+  --border:  rgba(120, 110, 200, 0.18);
+  --shadow:  0 8px 30px rgba(79, 124, 255, 0.12);
+  --grad:    linear-gradient(120deg, var(--blue), var(--violet) 45%, var(--pink));
+  --grad-soft: linear-gradient(135deg, rgba(79,124,255,.14), rgba(255,95,162,.14));
+  --radius:  22px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg:    #0c0a1e;
+    --bg-2:  #14102e;
+    --card:  rgba(30, 26, 60, 0.62);
+    --card-solid: #1a1638;
+    --text:  #f0edff;
+    --muted: #a49fce;
+    --border: rgba(150, 140, 240, 0.20);
+    --shadow: 0 8px 34px rgba(0, 0, 0, 0.45);
+    --grad-soft: linear-gradient(135deg, rgba(79,124,255,.20), rgba(255,95,162,.18));
+  }
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: "Segoe UI", system-ui, -apple-system, "Noto Sans TC", sans-serif;
+  color: var(--text);
+  line-height: 1.65;
+  min-height: 100vh;
+  background:
+    radial-gradient(1000px 600px at 50% -10%, rgba(255,95,162,.18), transparent 60%),
+    radial-gradient(800px 500px at 0% 10%, rgba(79,124,255,.20), transparent 55%),
+    radial-gradient(900px 600px at 100% 30%, rgba(53,208,230,.14), transparent 55%),
+    linear-gradient(180deg, var(--bg), var(--bg-2));
+  background-attachment: fixed;
+  -webkit-font-smoothing: antialiased;
+}
+
+.page {
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 26px 18px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.loading {
+  text-align: center;
+  color: var(--muted);
+  padding: 80px 0;
+}
+
+/* ── HERO ── */
+.hero {
+  text-align: center;
+  padding: 22px 16px 6px;
+}
+
+.avatar {
+  width: 116px;
+  height: 116px;
+  margin: 0 auto 16px;
+  border-radius: 50%;
+  padding: 4px;
+  background: var(--grad);
+  box-shadow: var(--shadow);
+}
+.avatar img,
+.avatar-fallback {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--card-solid);
+}
+.avatar-fallback {
+  font-size: 44px;
+  font-weight: 800;
+  color: var(--violet);
+}
+
+.name {
+  font-size: 34px;
+  font-weight: 900;
+  letter-spacing: 3px;
+  background: var(--grad);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.name-zh {
+  font-size: 15px;
+  color: var(--muted);
+  letter-spacing: 2px;
+  margin-top: 2px;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 7px;
+  margin-top: 14px;
+}
+.tag {
+  font-size: 12px;
+  font-weight: 600;
+  padding: 5px 12px;
+  border-radius: 999px;
+  color: var(--text);
+  background: var(--grad-soft);
+  border: 1px solid var(--border);
+}
+
+/* ── CARD ── */
+.card {
+  background: var(--card);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px 18px;
+  box-shadow: var(--shadow);
+}
+
+.card-title {
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.card-title::before {
+  content: "";
+  width: 16px;
+  height: 3px;
+  border-radius: 3px;
+  background: var(--grad);
+}
+
+.about-text p { margin-bottom: 6px; }
+.about-text p:last-child { margin-bottom: 0; }
+
+/* chips */
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip {
+  font-size: 14px;
+  font-weight: 600;
+  padding: 7px 15px;
+  border-radius: 12px;
+  background: var(--grad-soft);
+  border: 1px solid var(--border);
+}
+
+/* links */
+.link-row {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 13px 14px;
+  border-radius: 16px;
+  text-decoration: none;
+  color: var(--text);
+  background: var(--card-solid);
+  border: 1px solid var(--border);
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+.link-row + .link-row { margin-top: 10px; }
+.link-row:hover { transform: translateY(-2px); box-shadow: var(--shadow); }
+.link-icon {
+  flex: none;
+  width: 40px; height: 40px;
+  display: grid; place-items: center;
+  border-radius: 12px;
+  font-size: 20px; font-weight: 800;
+  color: #fff;
+  background: var(--grad);
+}
+.link-body { display: flex; flex-direction: column; flex: 1; min-width: 0; }
+.link-platform { font-size: 11px; color: var(--muted); letter-spacing: 1px; }
+.link-label { font-size: 15px; font-weight: 700; }
+.link-note { font-size: 12px; color: var(--muted); }
+.link-arrow { color: var(--muted); font-size: 16px; }
+
+/* ── FANDOM ── */
+.fandom {
+  position: relative;
+  overflow: hidden;
+  border-color: color-mix(in srgb, var(--accent) 35%, var(--border));
+}
+.fandom::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 5px;
+  background: var(--accent);
+}
+.fandom-head {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 14px;
+  padding-left: 4px;
+}
+.level-badge {
+  font-size: 12px;
+  font-weight: 800;
+  color: #fff;
+  background: var(--accent);
+  padding: 3px 10px;
+  border-radius: 999px;
+}
+.fandom-group {
+  font-size: 26px;
+  font-weight: 900;
+  letter-spacing: 2px;
+  color: var(--accent);
+}
+.bias {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--muted);
+  margin-left: auto;
+  white-space: nowrap;
+}
+
+.timeline {
+  list-style: none;
+  padding-left: 4px;
+  margin-bottom: 14px;
+}
+.tl-item {
+  position: relative;
+  padding-left: 20px;
+  padding-bottom: 12px;
+}
+.tl-item::before {
+  content: "";
+  position: absolute;
+  left: 4px; top: 7px;
+  width: 9px; height: 9px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 22%, transparent);
+}
+.tl-item:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  left: 8px; top: 16px; bottom: 0;
+  width: 2px;
+  background: color-mix(in srgb, var(--accent) 30%, transparent);
+}
+.tl-when {
+  display: block;
+  font-size: 12px;
+  font-weight: 800;
+  color: var(--accent);
+  letter-spacing: 1px;
+}
+.tl-what { font-size: 14.5px; }
+
+.notes {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.notes li {
+  position: relative;
+  padding-left: 18px;
+  font-size: 14.5px;
+}
+.notes li::before {
+  content: "♡";
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-size: 12px;
+  top: 2px;
+}
+
+/* ── HOBBIES（興趣坑） ── */
+.hobby-list { list-style: none; display: flex; flex-direction: column; gap: 0; }
+.hobby {
+  padding: 13px 0;
+  border-top: 1px dashed var(--border);
+}
+.hobby:first-child { border-top: none; padding-top: 2px; }
+.hobby-head {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.hobby-name {
+  font-size: 17px;
+  font-weight: 800;
+  letter-spacing: .5px;
+  background: var(--grad);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.hobby-when { font-size: 12px; font-weight: 700; color: var(--muted); }
+.hobby-bias {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 6px;
+}
+.bias-label {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--muted);
+}
+.char-badge {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text);
+  padding: 3px 11px;
+  border-radius: 999px;
+  background: var(--grad-soft);
+  border: 1px solid var(--border);
+}
+.hobby-note { font-size: 13.5px; color: var(--muted); margin-top: 6px; }
+.hobby-footnote {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px dashed var(--border);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--pink);
+  text-align: center;
+}
+
+/* ── CONCERTS ── */
+.concert-list { list-style: none; display: flex; flex-direction: column; gap: 0; }
+.concert {
+  display: flex;
+  gap: 12px;
+  padding: 12px 0;
+  border-top: 1px dashed var(--border);
+}
+.concert:first-child { border-top: none; }
+.concert-date {
+  flex: none;
+  width: 62px;
+  font-size: 13px;
+  font-weight: 800;
+  color: var(--blue);
+  letter-spacing: .5px;
+}
+.concert-main { display: flex; flex-direction: column; gap: 4px; min-width: 0; flex: 1; }
+.concert-title { font-size: 14.5px; font-weight: 700; line-height: 1.4; overflow-wrap: anywhere; }
+.concert-meta { display: flex; gap: 6px; flex-wrap: wrap; }
+.concert-group, .concert-city {
+  font-size: 11px;
+  font-weight: 700;
+  padding: 2px 9px;
+  border-radius: 999px;
+}
+.concert-group { color: #fff; background: var(--grad); }
+.concert-city { color: var(--muted); border: 1px solid var(--border); }
+
+/* ── SUPPORT ── */
+.support-grid { display: flex; flex-direction: column; gap: 12px; }
+.support-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 12px;
+  border-radius: 16px;
+  background: var(--card-solid);
+  border: 1px solid var(--border);
+  text-decoration: none;
+  color: var(--text);
+}
+.support-img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 12px;
+  object-fit: cover;
+  margin-bottom: 4px;
+}
+.support-img.placeholder {
+  display: grid;
+  place-items: center;
+  color: var(--muted);
+  font-size: 13px;
+  letter-spacing: 2px;
+  background: var(--grad-soft);
+  border: 1px dashed var(--border);
+}
+.support-date { font-size: 12px; font-weight: 800; color: var(--blue); }
+.support-title { font-size: 15px; font-weight: 700; }
+.support-note { font-size: 12.5px; color: var(--muted); }
+.support-link { transition: transform .15s ease, box-shadow .15s ease; }
+.support-link:hover { transform: translateY(-2px); box-shadow: var(--shadow); }
+
+/* ── FOOTER ── */
+.site-footer {
+  max-width: 480px;
+  margin: 8px auto 0;
+  padding: 24px 18px 40px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.site-footer a {
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-decoration: none;
+  background: var(--grad);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.site-footer .made {
+  font-size: 11px;
+  color: var(--muted);
+  letter-spacing: 1px;
+}
+
+/* small phones */
+@media (max-width: 360px) {
+  .name { font-size: 30px; }
+  .fandom-group { font-size: 23px; }
+}

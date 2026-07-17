@@ -1,0 +1,17 @@
+{
+  "version": 2,
+  "builds": [
+    { "src": "api/*.py",  "use": "@vercel/python" },
+    { "src": "*.html",    "use": "@vercel/static" },
+    { "src": "*.js",      "use": "@vercel/static" },
+    { "src": "*.css",     "use": "@vercel/static" },
+    { "src": "data/**",   "use": "@vercel/static" },
+    { "src": "assets/**", "use": "@vercel/static" }
+  ],
+  "routes": [
+    { "src": "/api/profile", "dest": "/api/profile.py" },
+    { "src": "/api/save",    "dest": "/api/save.py"    },
+    { "src": "/api/upload",  "dest": "/api/upload.py"  },
+    { "src": "/(.*)",        "dest": "/$1"             }
+  ]
+}
